@@ -49,11 +49,14 @@ pipeline{
 
         stage ('params') {
             steps {
+                sh """
                 echo "Hello ${params.PERSON}"
 
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+                
+                """
             }
         }
         
