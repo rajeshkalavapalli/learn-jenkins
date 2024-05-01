@@ -4,12 +4,17 @@ pipeline{
             label 'AGENT-1'
             
         }
+         environment { 
+            GREETING = 'hello good morning'
 }
     stages {
        
         stage ('git check out') {
             steps {
-                echo 'git checking out.......'
+                sh """
+                echo 'git checkingout....'
+                env
+                """
             }
         }
         stage ('build') {
