@@ -5,9 +5,14 @@ pipeline{
             
         }
 }
-environment { 
+    environment { 
         GREETING = 'good morning'
     }
+
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
+
     stages {
        
         stage ('git check out') {
@@ -24,7 +29,7 @@ environment {
             steps {
                 sh """
                     echo 'iam learning jenkins.......'
-                    env
+                    echo '$GREETING'
                 """
             }
         }
