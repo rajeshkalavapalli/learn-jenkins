@@ -37,8 +37,8 @@ environment {
         failure { 
             echo 'I will always run when failure !'
         }
-        failure { 
-            echo 'I will always run when failure !'
+        success { 
+            echo 'I will always run when success !'
         }
     }
 }
