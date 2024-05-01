@@ -4,6 +4,7 @@ pipeline{
             label 'AGENT-1'
             
         }
+    }
          environment { 
                 GREETING = 'hello good morning'
             }    
