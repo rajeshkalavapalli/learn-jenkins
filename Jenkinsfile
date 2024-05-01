@@ -26,7 +26,13 @@ pipeline{
     }
     post { 
         always { 
-            echo 'I will always say Hello again!'
+            echo 'I will always exicute run !'
+        }
+        failure { 
+            echo 'I will always run when failure !'
+        }
+        success { 
+            echo 'I will always run when success !'
         }
     }
 }
