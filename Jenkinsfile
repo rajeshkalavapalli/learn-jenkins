@@ -4,19 +4,15 @@ pipeline{
             label 'AGENT-1'
             
         }
-    }
-         environment { 
-                GREETING = 'hello good morning'
-            }    
 }
+environment { 
+        GREETING = 'good morning'
+    }
     stages {
        
         stage ('git check out') {
             steps {
-                sh """
-                echo 'git checkingout....'
-                env
-                """
+                echo 'git checking out.......'
             }
         }
         stage ('build') {
@@ -26,7 +22,10 @@ pipeline{
         }
         stage ('deploye') {
             steps {
-                echo 'deploye.......'
+                sh """
+                    echo 'iam learning jenkins.......'
+                    env
+                """
             }
         }
         
@@ -38,8 +37,8 @@ pipeline{
         failure { 
             echo 'I will always run when failure !'
         }
-        success { 
-            echo 'I will always run when success !'
+        failure { 
+            echo 'I will always run when failure !'
         }
     }
 }
