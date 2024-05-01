@@ -1,9 +1,11 @@
 pipeline{
     agent 
-    stages {
-        node {
-        label 'AGENT_1'
+     node {
+        label 'AGENT-1'
+
     }
+    stages {
+       
         stage ('git check out') {
             steps {
                 echo 'git checking out.......'
