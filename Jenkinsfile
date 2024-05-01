@@ -1,6 +1,9 @@
 pipeline{
-    agent any
+    agent 
     stages {
+        node {
+        label 'AGENT_1'
+    }
         stage ('git check out') {
             steps {
                 echo 'git checking out.......'
@@ -15,6 +18,12 @@ pipeline{
             steps {
                 echo 'deploye.......'
             }
+        }
+        
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
