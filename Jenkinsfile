@@ -31,7 +31,7 @@ pipeline{
                 sh """
                     echo 'iam learning jenkins.......'
                     echo '$GREETING'
-                    sleep 10 
+                    # sleep 10 
                 """
             }
         }
