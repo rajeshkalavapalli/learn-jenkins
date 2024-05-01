@@ -10,7 +10,7 @@ pipeline{
     }
 
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 1, unit: 'HOUR') 
     }
 
     stages {
@@ -30,6 +30,7 @@ pipeline{
                 sh """
                     echo 'iam learning jenkins.......'
                     echo '$GREETING'
+                    sleep 10 
                 """
             }
         }
