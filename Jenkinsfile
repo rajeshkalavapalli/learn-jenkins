@@ -8,7 +8,7 @@ pipeline {
         }
         
     }
-     stages{
+     stage {
         stage(testing) {
             steps {
                 echo 'testing....'
@@ -16,7 +16,7 @@ pipeline {
         }
         
     }
-      stages{
+      stages {
         stage(deploye) {
             steps {
                 echo 'deploye....'
