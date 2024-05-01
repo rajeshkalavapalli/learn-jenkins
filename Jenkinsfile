@@ -5,7 +5,8 @@ pipeline{
             
         }
          environment { 
-            GREETING = 'hello good morning'
+                GREETING = 'hello good morning'
+            }    
 }
     stages {
        
